@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Github",
+    "link": "https://github.com/who-know-cg",
+    "icon": "fab fa-github"
+  },
+  {
+    "name": "Telegram",
+    "link": "https://t.me/cgallen",
+    "icon": "fab fa-telegram"
+  },
+  {
+    "name": "allenlin@disroot.org",
+    "link": "mailto:allenlin@disroot.org",
+    "icon": "fas fa-envelope"
+  },
+  {
+    "name": "PGP Key",
+    "link": "https://telegra.ph/PGP-Key-for-allenlindisrootorg-09-19",
+    "icon": "fas fa-key"
+  }
+]
