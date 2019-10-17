@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import Butter from "buttercms"
 import { Link } from "gatsby"
 
+import arrow from "../images/arrow.png"
+
 export default () => {
   const [classList, setClassList] = useState(["container limited"])
   const [posts, setPosts] = useState()
@@ -40,11 +42,7 @@ export default () => {
           {/* more fade */}
           <div className={"more-fade"}>
             <Link to="/blog" className={"more-button"}>
-              <img
-                src={`../images/arrow.png`}
-                className={"arrow"}
-                alt="down arrow"
-              ></img>
+              <img src={arrow} className={"arrow"} alt="down arrow"></img>
               <span className={"more"}>MORE</span>
             </Link>
           </div>
