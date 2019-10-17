@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Landing from "../components/Landing"
 import Skills from "../components/skills"
 import Projects from "../components/projects"
+import Banner from "../components/banner"
 
 export default () => {
   return (
@@ -14,6 +15,7 @@ export default () => {
       <Landing />
       <Skills />
       <Projects />
+      <Banner />
     </Layout>
   )
 }
