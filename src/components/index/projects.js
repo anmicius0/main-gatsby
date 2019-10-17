@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+import logo from "../../images/logo"
+
 export default () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
@@ -58,11 +60,7 @@ export default () => {
             ref={moreFade}
           >
             <div className={"more-button"}>
-              <img
-                src={`../images/arrow.png`}
-                className={"arrow"}
-                alt="more"
-              ></img>
+              <img src={logo} className={"arrow"} alt="more"></img>
               <span className={"more"}>MORE</span>
             </div>
           </div>

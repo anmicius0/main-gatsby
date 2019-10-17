@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import Butter from "buttercms"
 import { Link } from "gatsby"
 
-import arrow from "../images/arrow.png"
+import arrow from "../../images/arrow.png"
 
 export default () => {
   const [classList, setClassList] = useState(["container limited"])
