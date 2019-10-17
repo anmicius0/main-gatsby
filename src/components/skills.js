@@ -17,10 +17,8 @@ export default () => {
     }
   `).allSkillsJson.edges
 
-  data.map(skill => {
-    console.log(skill.node.color)
-    console.log(skill.node.icon)
-    console.log(skill.node.name)
+  data.forEach(skill => {
+    console.log(skill.node)
   })
 
   return (
