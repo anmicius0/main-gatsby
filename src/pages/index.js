@@ -7,6 +7,7 @@ import Landing from "../components/Landing"
 import Skills from "../components/skills"
 import Projects from "../components/projects"
 import Banner from "../components/banner"
+import Blog from "../components/blog"
 import About from "../components/about"
 
 export default () => {
@@ -17,6 +18,7 @@ export default () => {
       <Skills />
       <Projects />
       <Banner />
+      <Blog />
       <About />
     </Layout>
   )
