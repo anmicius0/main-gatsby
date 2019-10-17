@@ -7,14 +7,22 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import bulma from "bulma"
+import { Helmet } from "react-helmet"
 
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.css"
+import "./layout.scss"
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <script
+          src="https://kit.fontawesome.com/9212f20657.js"
+          crossorigin="anonymous"
+        ></script>
+      </Helmet>
       <Header />
       <main>{children}</main>
       <Footer />
