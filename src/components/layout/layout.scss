@@ -67,7 +67,7 @@ body {
 //*******************************************************************
 
 .title {
-  margin: 4em 0 0 0;
+  margin: 3em 0;
   padding-bottom: 0;
 }
 
@@ -115,6 +115,21 @@ body {
   .blog {
     h3 {
       text-align: start;
+    }
+
+    .card {
+      border: none;
+      box-shadow: none;
+      margin: 0;
+
+      .crop {
+        overflow: hidden;
+        height: 278px;
+        width: 200px;
+      }
+      .card-content {
+        padding: 2em 0.5em;
+      }
     }
 
     p {

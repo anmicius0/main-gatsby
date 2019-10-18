@@ -3,7 +3,8 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
-import SecondLanding from "../components/sectionLanding"
+import SecondLanding from "../components/secondLanding"
+import OtherPost from "../components/blog/otherPost"
 
 export default () => {
   return (
@@ -11,7 +12,7 @@ export default () => {
       <SEO title="Home" />
       <SecondLanding title="Blog" />
       {/* <FirstPost /> */}
-      {/* <OtherPost /> */}
+      <OtherPost />
     </Layout>
   )
 }
