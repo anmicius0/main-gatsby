@@ -29,7 +29,7 @@ export default () => {
 
                     <div className={"card-content"}>
                       <h3>
-                        {/* if the title is too long */}
+                        if the title is too long
                         {post.title.length > 20
                           ? post.title.slice(0, 27) + " ..."
                           : post.title}
