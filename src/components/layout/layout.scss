@@ -247,7 +247,7 @@ img {
   }
 
   .content {
-    margin: 3em 0em;
+    margin: 3em 5vw;
     font-size: 1.3em;
     font-family: sans-serif;
   }
@@ -466,8 +466,24 @@ img {
         bottom: 1em;
         right: 1em;
         font-size: 1.2em;
-        background: #ffffff;
+        blogbackground: #ffffff;
       }
+    }
+  }
+
+  //*******************************************************************
+  //  Article                                                        //
+  //*******************************************************************
+  .post {
+    .image {
+      img {
+        height: 100vh;
+        width: auto;
+      }
+    }
+
+    .content {
+      font-size: 1.5em;
     }
   }
 
