@@ -2,14 +2,15 @@ import React from "react"
 
 import gradient from "../../images/TealLove.jpg"
 
-export default () => {
+export default props => {
+  const posts = props.posts
   return (
     <>
       <div className={"section"}>
         <div className={"container"}>
           {/* blog */}
           <div className={"columns is-multiline blog is-centered"}>
-            {/* {posts
+            {posts
               ? posts.map(post => (
                   <div
                     className={
@@ -18,26 +19,21 @@ export default () => {
                   >
                     <div className={"card-image"}>
                       <figure className={"image"}>
-                        <img
-                          src={
-                            post.featured_image ? post.featured_image : gradient
-                          }
-                          alt=""
-                        ></img>
+                        <img src={post.node.image.file.url} alt=""></img>
                       </figure>
                     </div>
 
                     <div className={"card-content"}>
                       <h3>
-                        if the title is too long
-                        {post.title.length > 20
-                          ? post.title.slice(0, 27) + " ..."
-                          : post.title}
+                        {/* if the title is too long */}
+                        {post.node.title.length > 20
+                          ? post.node.title.slice(0, 27) + " ..."
+                          : post.node.title}
                       </h3>
                     </div>
                   </div>
                 ))
-              : null} */}
+              : null}
           </div>
         </div>
       </div>

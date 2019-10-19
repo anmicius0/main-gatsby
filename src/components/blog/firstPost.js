@@ -3,21 +3,23 @@ import Img from "gatsby-image"
 
 import gradient from "../../images/TealLove.jpg"
 
-export default () => {
+export default props => {
+  const post = props.post
+
   return (
     <>
       <div className={"section"}>
         <div className={"container"}>
           <div className={"first-post"}>
             <figure className={"image"}>
-              <Img fluid={post.fluid ? post.fluid : gradient} alt=""></Img>
+              <img src={post.node.image.file.url} />
             </figure>
 
             <div className={"first-post-title"}>
               <h2>
-                {/* {post.title.length > 20
-                  ? post.title.slice(0, 85) + " ..."
-                  : post.title} */}
+                {post.node.title.length > 20
+                  ? post.node.title.slice(0, 85) + " ..."
+                  : post.node.title}
               </h2>
             </div>
           </div>
