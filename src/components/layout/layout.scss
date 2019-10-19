@@ -322,14 +322,12 @@ img {
       align-items: center;
 
       .image {
-        height: auto;
-        width: 60vw;
         // position: absolute;
         right: 0;
-
-        img {
-          border-radius: 20px;
-        }
+        height: 70vh;
+        width: 65vw;
+        overflow: hidden;
+        border-radius: 20px;
       }
 
       .first-post-title {

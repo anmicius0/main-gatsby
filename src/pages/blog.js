@@ -10,6 +10,7 @@ import OtherPost from "../components/blog/otherPost"
 export default ({ data }) => {
   const firstPost = data.allContentfulPost.edges[0]
   const otherPost = data.allContentfulPost.edges.slice(1)
+  console.log(data.allContentfulPost.edges)
   console.log(firstPost)
   console.log(otherPost)
 
@@ -25,7 +26,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allContentfulPost {
+    allContentfulPost(sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
           title
@@ -36,6 +37,7 @@ export const query = graphql`
               url
             }
           }
+          createdAt
         }
       }
     }
