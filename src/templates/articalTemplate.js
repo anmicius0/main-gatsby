@@ -4,17 +4,25 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 
 export default ({ data }) => {
-  const post = data.ContentfulPost.edges[0].node
+  console.log(data.contentfulPost)
+  const post = data.contentfulPost
 
   return (
     <Layout>
-      <h1>{post.title}</h1>
-      <h2>{post.subtitle}</h2>
-      <small>{post.author}</small>
-      <small>{post.date}</small>
-      <article>
-        <p>{post.content}</p>
-      </article>
+      <div className={"post"}>
+        <div className={"header"}>
+          <h1>{post.title}</h1>
+          <small>{post.createdAt}</small>
+        </div>
+
+        <figure className={"image"}>
+          <img src={post.image.file.url}></img>
+        </figure>
+
+        <div className={"content"}>
+          <article>{post.content}</article>
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -26,8 +34,13 @@ export const query = graphql`
       title
       subtitle
       author
-      date
       content
+      image {
+        file {
+          url
+        }
+      }
+      createdAt
     }
   }
 `
