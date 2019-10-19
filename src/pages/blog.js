@@ -1,18 +1,62 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+
+import gradient from "../images/TealLove.jpg"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import SecondLanding from "../components/secondLanding"
-import FirstPost from "../components/blog/firstPost"
 import OtherPost from "../components/blog/otherPost"
 
-export default () => {
+export default ({ data }) => {
+  const firstPost = data.allContentfulPost.edges[0].node
+  const otherPost = data.allContentfulPost.edges.slice(1)
+  console.log(firstPost)
+  console.log(otherPost)
+
   return (
     <Layout>
       <SEO title="Home" />
       <SecondLanding title="Blog" />
-      <FirstPost />
-      <OtherPost />
+
+      {/* first post */}
+      <div className={"section"}>
+        <div className={"container"}>
+          <div className={"first-post"}>
+            <figure className={"image"}>
+              <img src={firstPost.image.file.url} alt=""></img>
+            </figure>
+
+            <div className={"first-post-title"}>
+              <h2>
+                {firstPost.title.length > 20
+                  ? firstPost.title.slice(0, 85) + " ..."
+                  : firstPost.title}
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allContentfulPost {
+      edges {
+        node {
+          title
+          subtitle
+          slug
+          image {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`
