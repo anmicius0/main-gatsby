@@ -48,6 +48,10 @@ body {
   }
 }
 
+img {
+  border-radius: 20px;
+}
+
 //********************************************************************/
 //  Navbar                                                           //
 //********************************************************************/
@@ -122,11 +126,6 @@ body {
       box-shadow: none;
       margin: 0;
 
-      .crop {
-        overflow: hidden;
-        height: 278px;
-        width: 200px;
-      }
       .card-content {
         padding: 2em 0.5em;
       }
@@ -139,6 +138,10 @@ body {
       color: $primary-color;
       text-align: end;
     }
+  }
+
+  .first-post {
+    padding: 2em;
   }
 
   .more-fade {
@@ -311,6 +314,39 @@ body {
       margin: 2em;
       padding: 2em;
       position: relative;
+    }
+
+    .first-post {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .image {
+        height: auto;
+        width: 60vw;
+        // position: absolute;
+        right: 0;
+
+        img {
+          border-radius: 20px;
+        }
+      }
+
+      .first-post-title {
+        position: absolute;
+        border: 1px solid $primary-color;
+        border-radius: 20px;
+        right: 0;
+        background: white;
+        padding: 1em;
+        max-height: 50vh;
+        width: 40vw;
+        overflow: hidden;
+
+        h2 {
+          font-size: 3vw;
+        }
+      }
     }
 
     .more-fade {

@@ -1,31 +1,15 @@
-import React, { useState, useEffect } from "react"
-import Butter from "buttercms"
+import React from "react"
 
 import gradient from "../../images/TealLove.jpg"
 
 export default () => {
-  const butter = Butter("db07104b331d94843e152c512c464507483920c4")
-  const [posts, setPosts] = useState()
-
-  useEffect(() => {
-    butter.post
-      .list({ page: 1, page_size: 8 })
-      .then(res => {
-        console.log(res.data.data)
-        setPosts(res.data.data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }, [])
-
   return (
     <>
       <div className={"section"}>
         <div className={"container"}>
           {/* blog */}
           <div className={"columns is-multiline blog is-centered"}>
-            {posts
+            {/* {posts
               ? posts.map(post => (
                   <div
                     className={
@@ -33,7 +17,7 @@ export default () => {
                     }
                   >
                     <div className={"card-image"}>
-                      <figure className={"image is-4by3"}>
+                      <figure className={"image"}>
                         <img
                           src={
                             post.featured_image ? post.featured_image : gradient
@@ -53,7 +37,7 @@ export default () => {
                     </div>
                   </div>
                 ))
-              : null}
+              : null} */}
           </div>
         </div>
       </div>
