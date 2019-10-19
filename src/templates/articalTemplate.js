@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 
 export default ({ data }) => {
-  const post = data.allContentfulPost.edges[0]
+  const post = data.ContentfulPost.edges[0].node
 
   return (
     <Layout>

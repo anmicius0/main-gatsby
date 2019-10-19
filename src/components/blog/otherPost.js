@@ -1,7 +1,5 @@
 import React from "react"
 
-import gradient from "../../images/TealLove.jpg"
-
 export default props => {
   const posts = props.posts
   return (

@@ -1,7 +1,4 @@
 import React from "react"
-import Img from "gatsby-image"
-
-import gradient from "../../images/TealLove.jpg"
 
 export default props => {
   const post = props.post
@@ -12,7 +9,7 @@ export default props => {
         <div className={"container"}>
           <div className={"first-post"}>
             <figure className={"image"}>
-              <img src={post.node.image.file.url} />
+              <img src={post.node.image.file.url} alt="" />
             </figure>
 
             <div className={"first-post-title"}>
