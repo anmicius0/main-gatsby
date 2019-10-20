@@ -7,7 +7,7 @@ import Landing from "../components/index/Landing"
 import Skills from "../components/index/skills"
 import Projects from "../components/index/projects"
 import Banner from "../components/index/banner"
-import Blog from "../components/index/blog"
+import Blog from "../components/index/blog-component"
 import About from "../components/index/about"
 
 export default () => {
