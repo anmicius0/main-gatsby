@@ -87,13 +87,15 @@ img {
 
   .column {
     background: #ffffff;
-    border: 0.5px solid rgba(0, 209, 178, 0.3);
-    box-sizing: border-bLogoox;
-    border-radius: 18px;
 
     margin: 1.5em 2em;
     padding: 2em;
     text-align: center;
+  }
+
+  .column:hover {
+    border: 0.5px solid rgba(0, 209, 178, 1);
+    border-radius: 18px;
   }
 
   .skills {
@@ -113,30 +115,6 @@ img {
       margin-top: 1.5em;
       font-weight: 700;
       font-size: 1.1em;
-    }
-  }
-
-  .blog {
-    h3 {
-      text-align: start;
-    }
-
-    .card {
-      border: none;
-      box-shadow: none;
-      margin: 0;
-
-      .card-content {
-        padding: 2em 0.5em;
-      }
-    }
-
-    p {
-      border-radius: 6px;
-      margin-top: 1.5em;
-      font-weight: 700;
-      color: $primary-color;
-      text-align: end;
     }
   }
 

@@ -17,10 +17,6 @@ export default () => {
     }
   `).allSkillsJson.edges
 
-  data.forEach(skill => {
-    console.log(skill.node)
-  })
-
   return (
     <>
       <div className={"section"}>

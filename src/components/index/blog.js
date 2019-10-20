@@ -1,40 +1,46 @@
-import React, { useState, useEffect } from "react"
-import Butter from "buttercms"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import arrow from "../../images/arrow.png"
 
 export default () => {
-  const [classList, setClassList] = useState(["container limited"])
-  const [posts, setPosts] = useState()
-  const butter = Butter("db07104b331d94843e152c512c464507483920c4")
+  const query = useStaticQuery(graphql`
+    query {
+      allContentfulPost(limit: 2, sort: { fields: [createdAt], order: DESC }) {
+        edges {
+          node {
+            slug
+            image {
+              fluid {
+                ...GatsbyContentfulFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
-  useEffect(() => {
-    butter.post
-      .list({ page: 1, page_size: 5 })
-      .then(res => {
-        console.log(res.data.data)
-        setPosts(res.data.data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }, [])
+  const posts = query.allContentfulPost.edges
+  console.log(posts)
 
   return (
     <>
       <div className={"section"}>
-        <div className={classList}>
+        <div className={"container limited"}>
           <h2>Blog</h2>
 
           {/* blog */}
           <div className={"columns is-multiline blog is-centered"}>
             {posts
               ? posts.map(post => (
-                  <div className={"column is-5-desktop is-11-tablet"}>
-                    <h3>{post.title}</h3>
-                    <p> Read More</p>
-                  </div>
+                  <Link
+                    to={post.node.slug}
+                    className={"column image is-5-desktop is-11-tablet"}
+                  >
+                    <Img className={"img"} fluid={post.node.image.fluid} />
+                  </Link>
                 ))
               : null}
           </div>

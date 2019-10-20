@@ -33,10 +33,6 @@ export default () => {
     }
   }, [])
 
-  data.forEach(project => {
-    console.log(project.node)
-  })
-
   return (
     <>
       <div className={"section"}>
