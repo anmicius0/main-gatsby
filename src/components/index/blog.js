@@ -32,7 +32,7 @@ export default () => {
           <h2>Blog</h2>
 
           {/* blog */}
-          <div className={"columns is-multiline blog is-centered"}>
+          <div className={"columns is-multiline posts is-centered"}>
             {posts
               ? posts.map(post => (
                   <Link

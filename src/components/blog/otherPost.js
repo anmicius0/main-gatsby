@@ -14,14 +14,12 @@ export default props => {
       <div className={"section"}>
         <div className={"container"}>
           {/* blog */}
-          <div className={"columns is-multiline blog is-centered"}>
+          <div className={"columns is-multiline posts is-centered"}>
             {posts
               ? posts.map(post => (
                   <Link
                     to={post.node.slug}
-                    className={
-                      "column card no-border no-margin is-3-desktop is-6-tablet"
-                    }
+                    className={"column card is-3-desktop is-6-tablet"}
                   >
                     <div className={"card-image"}>
                       <figure className={"image"}>
