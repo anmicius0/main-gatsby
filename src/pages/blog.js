@@ -30,14 +30,12 @@ export const query = graphql`
       edges {
         node {
           title
-          subtitle
           slug
           image {
             file {
               url
             }
           }
-          createdAt
         }
       }
     }

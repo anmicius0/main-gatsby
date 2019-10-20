@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 export default props => {
   const post = props.post
@@ -7,7 +8,7 @@ export default props => {
     <>
       <div className={"section"}>
         <div className={"container"}>
-          <div className={"first-post"}>
+          <Link to={post.node.slug} className={"first-post"}>
             <figure className={"image"}>
               <img src={post.node.image.file.url} alt="" />
             </figure>
@@ -19,7 +20,7 @@ export default props => {
                   : post.node.title}
               </h2>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </>

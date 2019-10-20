@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 export default props => {
   const posts = props.posts
@@ -10,7 +11,8 @@ export default props => {
           <div className={"columns is-multiline blog is-centered"}>
             {posts
               ? posts.map(post => (
-                  <div
+                  <Link
+                    to={post.node.slug}
                     className={
                       "column card no-border no-margin is-3-desktop is-6-tablet"
                     }
@@ -29,7 +31,7 @@ export default props => {
                           : post.node.title}
                       </h3>
                     </div>
-                  </div>
+                  </Link>
                 ))
               : null}
           </div>
