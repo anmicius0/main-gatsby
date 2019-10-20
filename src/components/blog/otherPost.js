@@ -1,8 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 export default props => {
   const posts = props.posts
+  console.log(posts)
+  posts.forEach(post => {
+    console.log(post)
+  })
+
   return (
     <>
       <div className={"section"}>
@@ -19,7 +25,7 @@ export default props => {
                   >
                     <div className={"card-image"}>
                       <figure className={"image"}>
-                        <img src={post.node.image.file.url} alt=""></img>
+                        <Img fluid={post.node.image.fluid} alt="" />
                       </figure>
                     </div>
 

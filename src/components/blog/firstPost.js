@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 export default props => {
   const post = props.post
@@ -10,7 +11,7 @@ export default props => {
         <div className={"container"}>
           <Link to={post.node.slug} className={"first-post"}>
             <figure className={"image"}>
-              <img src={post.node.image.file.url} alt="" />
+              <Img fluid={post.node.image.fluid} alt="" />
             </figure>
 
             <div className={"first-post-title"}>

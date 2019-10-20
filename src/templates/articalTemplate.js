@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout/layout"
 
@@ -16,7 +17,7 @@ export default ({ data }) => {
         </div>
 
         <figure className={"image"}>
-          <img src={post.image.file.url}></img>
+          <Img fixed={post.image.fixed} />
         </figure>
 
         <div className={"content"}>
@@ -36,8 +37,8 @@ export const query = graphql`
       author
       content
       image {
-        file {
-          url
+        fixed {
+          ...GatsbyContentfulFixed
         }
       }
       createdAt

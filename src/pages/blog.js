@@ -32,8 +32,8 @@ export const query = graphql`
           title
           slug
           image {
-            file {
-              url
+            fluid {
+              ...GatsbyContentfulFluid
             }
           }
         }
