@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import arrow from "../../images/arrow.png"
 
 export default () => {
-  const query = useStaticQuery(graphql`
+  const posts = useStaticQuery(graphql`
     query {
       allContentfulPost(limit: 2, sort: { fields: [createdAt], order: DESC }) {
         edges {
@@ -20,10 +20,7 @@ export default () => {
         }
       }
     }
-  `)
-
-  const posts = query.allContentfulPost.edges
-  console.log(posts)
+  `).allContentfulPost.edges
 
   return (
     <>

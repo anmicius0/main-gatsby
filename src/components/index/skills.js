@@ -20,9 +20,9 @@ export default () => {
   return (
     <>
       <div className={"section"}>
-        <div className={"container skills"}>
+        <div className={"container"}>
           <h2>Skills</h2>
-          <div className={"columns is-mutiline"}>
+          <div className={"columns is-mutiline"} id={"skills"}>
             {data.map(skill => (
               <div className={"column"}>
                 <span className={"icon"}>

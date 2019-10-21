@@ -96,7 +96,6 @@ img {
 //*******************************************************************
 //  Skills, Project, and  Blog                                     //
 //*******************************************************************
-
 .section {
   .limited {
     height: 110vh;
@@ -113,26 +112,6 @@ img {
   .column:hover {
     border: 0.5px solid rgba(0, 209, 178, 1);
     border-radius: 18px;
-  }
-
-  .skills {
-    .column {
-      border: none;
-
-      i {
-        color: $primary-color;
-      }
-    }
-  }
-
-  .projects {
-    .button {
-      border-radius: 6px;
-      border-width: 2px;
-      margin-top: 1.5em;
-      font-weight: 700;
-      font-size: 1.1em;
-    }
   }
 
   .first-post {
@@ -219,6 +198,26 @@ img {
         display: inline;
       }
     }
+  }
+}
+
+#skills {
+  .column {
+    border: none;
+
+    i {
+      color: $primary-color;
+    }
+  }
+}
+
+#projects {
+  .button {
+    border-radius: 6px;
+    border-width: 2px;
+    margin-top: 1.5em;
+    font-weight: 700;
+    font-size: 1.1em;
   }
 }
 

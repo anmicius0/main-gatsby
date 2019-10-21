@@ -16,14 +16,10 @@ export default () => {
     }
   `).allContactsJson.edges
 
-  data.forEach(contact => {
-    console.log(contact.node)
-  })
-
   return (
     <>
       <div className={"section"}>
-        <div className={"container"} id="about">
+        <div className={"container"} id={"about"}>
           <h2>
             About <br />
             <span>ANMICIUS</span>
