@@ -1,0 +1,75 @@
+//*******************************************************************
+//  Font                                                           //
+//*******************************************************************
+@font-face {
+  font-family: "Cantarell";
+  font-weight: 400;
+  src: url("../font/Cantarell-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Cantarell";
+  font-weight: 700;
+  src: url("../font/Cantarell-Bold.ttf");
+}
+
+@font-face {
+  font-family: "DINpro";
+  font-weight: 700;
+  src: url("../font/DINPro-Bold_13934.ttf");
+}
+
+$primary-color: #00d1b2;
+
+//*******************************************************************
+//  Base Tag                                                       //
+//*******************************************************************
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cantarell", sans-serif;
+
+  // for title on landing page (Index, Blog)
+  h1 {
+    font-family: "DINpro", sans-serif;
+    font-size: 1.8em;
+    color: $primary-color;
+  }
+
+  // for title on section
+  h2 {
+    font-family: "DINpro", sans-serif;
+    font-size: 2.5em;
+    color: #000000;
+    margin: 1.2em 0;
+  }
+
+  // for title on items
+  h3 {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #000000;
+  }
+}
+
+img {
+  border-radius: 20px;
+}
+
+@media (min-width: 1080px) {
+  body {
+    h1 {
+      font-size: 3em;
+    }
+    h2 {
+      font-size: 3.5em;
+      margin: 0.6em 0;
+    }
+    h3 {
+      font-size: 1.7em;
+    }
+  }
+}

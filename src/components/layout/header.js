@@ -1,10 +1,10 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
 import Logo from "../../images/logo"
 
-const Header = ({ siteTitle }) => (
+// Navbar that display in layout.js
+export default () => (
   <nav className={"navbar is-fixed-top"}>
     <div className={"navbar-brand"}>
       <Link to="/" className={"navbar-item"}>
@@ -13,13 +13,3 @@ const Header = ({ siteTitle }) => (
     </div>
   </nav>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header

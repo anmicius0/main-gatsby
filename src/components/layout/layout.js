@@ -12,7 +12,7 @@ import { Helmet } from "react-helmet"
 
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.scss"
+import "../../style/layout.scss"
 
 const Layout = ({ children }) => {
   return (

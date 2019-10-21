@@ -1,70 +1,5 @@
-//*******************************************************************
-//  Initial Value                                                  //
-//*******************************************************************
-@font-face {
-  font-family: "Cantarell";
-  font-weight: 400;
-  src: url("../../font/Cantarell-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Cantarell";
-  font-weight: 700;
-  src: url("../../font/Cantarell-Bold.ttf");
-}
-
-@font-face {
-  font-family: "DINpro";
-  font-weight: 700;
-  src: url("../../font/DINPro-Bold_13934.ttf");
-}
-
-$primary-color: #00d1b2;
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Cantarell", sans-serif;
-
-  h1 {
-    font-family: "DINpro", sans-serif;
-    font-size: 1.8em;
-    color: $primary-color;
-  }
-
-  h2 {
-    font-family: "DINpro", sans-serif;
-    font-size: 2.5em;
-    color: #000000;
-    margin: 1.2em 0;
-  }
-
-  h3 {
-    font-weight: 700;
-    font-size: 1.5em;
-    color: #000000;
-  }
-}
-
-img {
-  border-radius: 20px;
-}
-
-//********************************************************************/
-//  Navbar                                                           //
-//********************************************************************/
-
-#Logo {
-  height: 3vh;
-  margin: 0.5em;
-}
-
-.navbar {
-  margin: 0;
-  position: fixed;
-}
+@use 'base';
+@use 'navbarFooter'
 
 //*******************************************************************
 //  Landings                                                        //
@@ -288,46 +223,7 @@ img {
   }
 }
 
-//*******************************************************************
-//  Footer                                                         //
-//*******************************************************************
-
-#footer {
-  background-color: #000000;
-  padding: 1em;
-  color: rgba(255, 255, 255, 0.55);
-  text-align: center;
-
-  a {
-    color: rgba(255, 255, 255, 0.55);
-  }
-}
-
 @media (min-width: 1080px) {
-  //*******************************************************************
-  //  Initial Value                                                  //
-  //*******************************************************************
-  body {
-    h1 {
-      font-size: 3em;
-    }
-    h2 {
-      font-size: 3.5em;
-      margin: 0.6em 0;
-    }
-    h3 {
-      font-size: 1.7em;
-    }
-  }
-
-  /*/*******************************************************************/
-  //  Navbar                                                         //
-  /*/*******************************************************************/
-  #Logo {
-    height: 4vh;
-    margin: 0.5em 2em;
-  }
-
   //*******************************************************************
   //  Project  and  Blog                                             //
   //*******************************************************************
