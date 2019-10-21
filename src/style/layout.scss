@@ -135,9 +135,9 @@ img {
   .button {
     border-radius: 6px;
     border-width: 2px;
-    margin-top: 1.5em;
+    margin: 1.5em;
     font-weight: 700;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 
@@ -417,15 +417,6 @@ img {
           display: inline;
         }
       }
-    }
-  }
-
-  //*******************************************************************
-  //  Projects                                                       //
-  //*******************************************************************
-  #projects {
-    button {
-      font-size: 1.3em;
     }
   }
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -9,6 +9,7 @@ export default () => {
           node {
             name
             link
+            repository
           }
         }
       }
@@ -20,12 +21,24 @@ export default () => {
       <div className={"section"}>
         <div className={"container"}>
           <h2>Projects</h2>
-          <div className={"columns is-multiline is-centered projects"}>
+          <div className={"columns is-multiline is-centered"} id={"projects"}>
             {data.map(project => (
-              <a className={"column"} href={project.node.link}>
+              <div className={"column"}>
                 <h3>{project.node.name}</h3>
-                <button className={"button is-primary is-outlined"}>Go</button>
-              </a>
+                {/* link to website */}
+                <button className={"button is-primary is-outlined is-large"}>
+                  Go
+                </button>
+
+                {/* link to repository */}
+                <a href={project.node.repository}>
+                  <button className={"button is-primary is-outlined is-large"}>
+                    <span className={"icon"}>
+                      <i className={"fab fa-github"}></i>
+                    </span>
+                  </button>
+                </a>
+              </div>
             ))}
           </div>
         </div>

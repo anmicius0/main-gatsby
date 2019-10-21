@@ -1,4 +1,12 @@
 [
-  { "name": "Quizlet tool", "link": "https://quizlet.anmicius.tk" },
-  { "name": "Stock simulator", "link": "https://stock.anmicius.tk" }
+  {
+    "name": "Quizlet tool",
+    "link": "https://quizlet.anmicius.tk",
+    "repository": "https://github.com/who-know-cg/quizlet-separator"
+  },
+  {
+    "name": "Stock simulator",
+    "link": "https://stock.anmicius.tk",
+    "repository": "https://github.com/who-know-cg/stock-calculator"
+  }
 ]
