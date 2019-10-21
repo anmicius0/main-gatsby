@@ -1,13 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 
-const Footer = () => {
+export default () => {
   return (
     <div id="footer">
-      Made with &nbsp; <i class="far fa-heart"></i> &nbsp; by ANMICIUS. With
-      support from: <Link to="https://buttercms.com">ButterCMS</Link>
+      Made with &nbsp; <i class="far fa-heart"></i> &nbsp; by ANMICIUS.
     </div>
   )
 }
-
-export default Footer
