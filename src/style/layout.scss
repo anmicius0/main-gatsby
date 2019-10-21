@@ -142,6 +142,106 @@ img {
 }
 
 //*******************************************************************
+//  Banner                                                         //
+//*******************************************************************
+.banner {
+  h2 {
+    color: #ffffff;
+  }
+}
+
+//*******************************************************************
+//  About                                                          //
+//*******************************************************************
+#about {
+  height: auto;
+  overflow: visible;
+
+  h2 > span {
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 1.3em;
+    line-height: 1.4em;
+    margin: 1em 0 2em 0;
+  }
+
+  a {
+    background: #ffffff;
+    border: 0.3px solid rgba(0, 209, 178, 0.3);
+    box-sizing: border-box;
+    box-shadow: -3px 3px 4px rgba(0, 209, 178, 0.3);
+    border-radius: 10px;
+    height: auto;
+    margin: 0.5em;
+
+    i {
+      color: $primary-color;
+    }
+
+    span {
+      font-size: 1.3em;
+    }
+  }
+}
+
+//*******************************************************************
+//  First-post and Posts                                           //
+//*******************************************************************
+#first-post {
+  text-align: center;
+}
+
+#posts {
+  .card {
+    border: none;
+    box-shadow: none;
+    padding: none;
+
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+}
+
+//*******************************************************************
+//  Post (Article)                                                 //
+//*******************************************************************
+#post {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .header {
+    box-shadow: none;
+    margin-bottom: 2em;
+
+    h2 {
+      font-size: 3em;
+      margin: 1em 0 0.5em 0;
+    }
+  }
+
+  .image {
+    height: auto;
+    width: auto;
+
+    div {
+      width: 80vw;
+    }
+  }
+
+  .content {
+    margin: 3em 5vw;
+    font-size: 1.3em;
+    font-family: sans-serif;
+  }
+}
+
+//*******************************************************************
 //  More-fade                                                      //
 //*******************************************************************
 #more-fade {
@@ -214,108 +314,6 @@ img {
   }
 }
 
-//*******************************************************************
-//  First-post and Posts                                           //
-//*******************************************************************
-#first-post {
-  text-align: center;
-}
-
-#posts {
-  .card {
-    border: none;
-    box-shadow: none;
-    padding: none;
-
-    h3 {
-      font-size: 1.5em;
-    }
-  }
-}
-
-//*******************************************************************
-//  Post                                                           //
-//*******************************************************************
-#post {
-  margin: 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  .header {
-    box-shadow: none;
-    margin: 1em;
-
-    h2 {
-      font-size: 3em;
-      color: #000000;
-      margin: 1em 0 0.5em 0;
-    }
-  }
-
-  .image {
-    height: auto;
-    width: auto;
-
-    img {
-      width: 50vw;
-    }
-  }
-
-  .content {
-    margin: 3em 5vw;
-    font-size: 1.3em;
-    font-family: sans-serif;
-  }
-}
-
-//*******************************************************************
-//  Banner                                                         //
-//*******************************************************************
-
-.banner {
-  h2 {
-    color: #ffffff;
-  }
-}
-
-//*******************************************************************
-//  About                                                          //
-//*******************************************************************
-#about {
-  height: auto;
-  overflow: visible;
-
-  h2 > span {
-    color: $primary-color;
-  }
-
-  p {
-    font-size: 1.3em;
-    line-height: 1.4em;
-    margin: 1em 0 2em 0;
-  }
-
-  a {
-    background: #ffffff;
-    border: 0.3px solid rgba(0, 209, 178, 0.3);
-    box-sizing: border-box;
-    box-shadow: -3px 3px 4px rgba(0, 209, 178, 0.3);
-    border-radius: 10px;
-    height: auto;
-    margin: 0.5em;
-
-    i {
-      color: $primary-color;
-    }
-
-    span {
-      font-size: 1.3em;
-    }
-  }
-}
-
 @media (min-width: 1080px) {
   //*******************************************************************
   //  Base tag                                                       //
@@ -354,37 +352,6 @@ img {
       margin: 2em;
       padding: 2em;
       position: relative;
-    }
-
-    .first-post {
-      position: relative;
-      display: flex;
-      align-items: center;
-
-      .image {
-        // position: absolute;
-        right: 0;
-        height: 70vh;
-        width: 65vw;
-        overflow: hidden;
-        border-radius: 20px;
-      }
-
-      .first-post-title {
-        position: absolute;
-        border: 1px solid white;
-        border-radius: 20px;
-        right: 0;
-        background: white;
-        padding: 1em;
-        max-height: 50vh;
-        width: 40vw;
-        overflow: hidden;
-
-        h2 {
-          font-size: 3vw;
-        }
-      }
     }
 
     .more-fade {
@@ -451,42 +418,14 @@ img {
         }
       }
     }
-
-    .projects {
-      button {
-        font-size: 1.3em;
-      }
-    }
-
-    .posts {
-      .card {
-        h3 {
-          font-size: 2em;
-        }
-
-        p {
-          position: absolute;
-          bottom: 1em;
-          right: 1em;
-          font-size: 1.2em;
-        }
-      }
-    }
   }
 
   //*******************************************************************
-  //  Article                                                        //
+  //  Projects                                                       //
   //*******************************************************************
-  .post {
-    .image {
-      img {
-        height: 100vh;
-        width: auto;
-      }
-    }
-
-    .content {
-      font-size: 1.5em;
+  #projects {
+    button {
+      font-size: 1.3em;
     }
   }
 
@@ -505,6 +444,68 @@ img {
   #about {
     p {
       font-size: 1.7em;
+    }
+  }
+
+  //*******************************************************************
+  //  First-post and posts                                           //
+  //*******************************************************************
+  #first-post {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .image {
+      right: 0;
+      height: 70vh;
+      width: 65vw;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .first-post-title {
+      position: absolute;
+      border: 1px solid white;
+      border-radius: 20px;
+      right: 0;
+      background: white;
+      padding: 1em;
+      max-height: 50vh;
+      width: 40vw;
+      overflow: hidden;
+
+      h2 {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  #posts {
+    .card {
+      h3 {
+        font-size: 2em;
+      }
+    }
+  }
+
+  //*******************************************************************
+  //  Post (Article)                                                 //
+  //*******************************************************************
+  #post {
+    .header {
+      h2 {
+        font-size: 4em;
+      }
+    }
+
+    .image {
+      div {
+        height: 90vh;
+      }
+    }
+
+    .content {
+      font-size: 1.5em;
     }
   }
 }

@@ -18,7 +18,7 @@ export default ({ data }) => {
             </div>
 
             <figure className={"image"}>
-              <Img fixed={post.image.fixed} />
+              <Img fluid={post.image.fluid} />
             </figure>
 
             <div className={"content"}>
@@ -40,8 +40,8 @@ export const query = graphql`
       author
       content
       image {
-        fixed {
-          ...GatsbyContentfulFixed
+        fluid {
+          ...GatsbyContentfulFluid
         }
       }
       createdAt
