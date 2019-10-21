@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 
-import Landing from "../components/index/Landing"
+import Landing from "../components/Landing"
 import Skills from "../components/index/skills"
 import Projects from "../components/index/projects"
 import Banner from "../components/index/banner"
@@ -14,7 +14,13 @@ export default () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Landing />
+      <Landing
+        title={
+          <div>
+            It's <br /> Anmicius
+          </div>
+        }
+      />
       <Skills />
       <Projects />
       <Banner />
