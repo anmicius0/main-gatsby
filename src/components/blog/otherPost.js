@@ -14,7 +14,7 @@ export default props => {
       <div className={"section"}>
         <div className={"container"}>
           {/* blog */}
-          <div className={"columns is-multiline posts is-centered"}>
+          <div className={"columns is-multiline is-centered"} id={"posts"}>
             {posts
               ? posts.map(post => (
                   <Link
