@@ -5,23 +5,26 @@ import Img from "gatsby-image"
 import Layout from "../components/layout/layout"
 
 export default ({ data }) => {
-  console.log(data.contentfulPost)
   const post = data.contentfulPost
 
   return (
     <Layout>
-      <div className={"post"}>
-        <div className={"header"}>
-          <h1>{post.title}</h1>
-          <small>{post.createdAt}</small>
-        </div>
+      <div className={"section"}>
+        <div className={"container"}>
+          <div id={"post"}>
+            <div className={"header"}>
+              <h2>{post.title}</h2>
+              <small>{post.createdAt}</small>
+            </div>
 
-        <figure className={"image"}>
-          <Img fixed={post.image.fixed} />
-        </figure>
+            <figure className={"image"}>
+              <Img fixed={post.image.fixed} />
+            </figure>
 
-        <div className={"content"}>
-          <article>{post.content}</article>
+            <div className={"content"}>
+              <article>{post.content}</article>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
