@@ -43,7 +43,7 @@ export default () => {
           </div>
 
           {/* more fade */}
-          <div className={"more-fade"}>
+          <div id={"more-fade"}>
             <Link to="/blog" className={"more-button"}>
               <img src={arrow} className={"arrow"} alt="down arrow"></img>
               <span className={"more"}>MORE</span>
