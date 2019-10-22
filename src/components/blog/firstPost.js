@@ -9,7 +9,7 @@ export default props => {
     <>
       <div className={"section"}>
         <div className={"container"}>
-          <Link to={post.node.slug} id={"first-post"}>
+          <Link to={"/blog/" + post.node.slug} id={"first-post"}>
             <figure className={"image"}>
               <Img fluid={post.node.image.fluid} alt="" />
             </figure>

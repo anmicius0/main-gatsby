@@ -18,7 +18,7 @@ export default props => {
             {posts
               ? posts.map(post => (
                   <Link
-                    to={post.node.slug}
+                    to={"/blog/" + post.node.slug}
                     className={"column card is-3-desktop is-6-tablet"}
                   >
                     <div className={"card-image"}>
