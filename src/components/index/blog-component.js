@@ -33,7 +33,7 @@ export default () => {
             {posts
               ? posts.map(post => (
                   <Link
-                    to={post.node.slug}
+                    to={"/blog/" + post.node.slug}
                     className={"column image is-5-desktop is-11-tablet"}
                   >
                     <Img className={"img"} fluid={post.node.image.fluid} />
