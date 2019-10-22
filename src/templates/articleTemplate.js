@@ -15,6 +15,8 @@ export default ({ data }) => {
             <div className={"header"}>
               <h2>{post.title}</h2>
               <small>{post.createdAt}</small>
+              <br />
+              <small>{post.credit}</small>
             </div>
 
             <figure className={"image"}>
@@ -22,7 +24,7 @@ export default ({ data }) => {
             </figure>
 
             <div className={"content"}>
-              <article>{post.content}</article>
+              <article>{post.content.content}</article>
             </div>
           </div>
         </div>
@@ -34,17 +36,17 @@ export default ({ data }) => {
 export const query = graphql`
   query ContentfulBlogPostBySlug($slug: String!) {
     contentfulPost(slug: { eq: $slug }) {
-      id
       title
-      subtitle
-      author
-      content
+      createdAt
       image {
         fluid {
           ...GatsbyContentfulFluid
         }
       }
-      createdAt
+      credit
+      content {
+        content
+      }
     }
   }
 `

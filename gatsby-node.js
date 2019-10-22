@@ -10,7 +10,6 @@ exports.createPages = async ({ graphql, actions }) => {
         allContentfulPost {
           edges {
             node {
-              id
               slug
               title
             }
