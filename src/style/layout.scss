@@ -226,10 +226,8 @@ img {
   }
 
   .image {
-    height: auto;
-    width: auto;
-
     div {
+      height: auto;
       width: 80vw;
     }
   }
@@ -252,12 +250,7 @@ img {
   bottom: 0;
   height: 40vh;
   width: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.8) 41.67%,
-    #ffffff 100%
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 41.67%, #ffffff 100%);
 
   .more-button {
     //position
@@ -357,12 +350,7 @@ img {
     .more-fade {
       height: 40vh;
       width: 100%;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.8) 41.67%,
-        #ffffff 100%
-      );
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 41.67%, #ffffff 100%);
 
       .more-button {
         //position
@@ -491,7 +479,7 @@ img {
 
     .image {
       div {
-        height: 90vh;
+        max-height: 90vh;
       }
     }
 
